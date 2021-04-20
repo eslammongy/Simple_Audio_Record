@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <View
+      android:id="@+id/constraintLayout"
+      android:layout_width="0dp"
+      android:layout_height="300dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="20dp"
+      android:background="@drawable/dialog_custom_shape"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.399" />
+
+  <Button
+      android:id="@+id/btn_CloseDeleteDialog"
+      android:layout_width="120dp"
+      android:layout_height="50dp"
+      android:background="@drawable/btn_shape_one"
+      android:fontFamily="@font/opensens_reguler"
+      android:text="@string/exit"
+      android:textAllCaps="false"
+      android:textColor="@color/White"
+      android:textSize="20sp"
+      android:onClick="exitEditDialog"
+      android:layout_marginStart="20dp"
+      app:layout_constraintBottom_toBottomOf="@+id/btn_YesDeleteDialog"
+      app:layout_constraintStart_toStartOf="@+id/constraintLayout" />
+
+  <Button
+      android:id="@+id/btn_YesDeleteDialog"
+      android:layout_width="120dp"
+      android:layout_height="50dp"
+      android:background="@drawable/btn_shape_one"
+      android:fontFamily="@font/opensens_reguler"
+      android:text="@string/save"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:textSize="20sp"
+      android:onClick="saveEditDialog"
+      android:layout_marginBottom="15dp"
+      android:layout_marginEnd="20dp"
+      app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+      app:layout_constraintEnd_toEndOf="@+id/constraintLayout" />
+
+  <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:layout_marginBottom="260dp"
+      android:background="@drawable/btn_shape_one"
+      android:padding="15dp"
+      android:src="@drawable/ic_round_edit_24"
+      app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+      app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+      app:tint="@color/White" />
+
+  <EditText
+      android:id="@+id/dialog_inputName"
+      android:layout_width="0dp"
+      android:layout_height="60dp"
+      android:fontFamily="@font/opensens_reguler"
+      android:gravity="center"
+      android:padding="8dp"
+      android:textAllCaps="false"
+      android:textColor="@color/White"
+      android:textSize="20sp"
+      android:hint="@string/record_name"
+      android:textColorHint="@color/ColorDefaultNote"
+      android:background="@drawable/task_elementy_two"
+      android:layout_marginTop="50dp"
+      android:layout_marginEnd="20dp"
+      android:layout_marginStart="20dp"
+      app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+      app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+      app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

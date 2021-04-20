@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorDarkBlack"
+    tools:context=".AddNewRecordActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/audioParentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_dummy"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="20dp"
+            android:alpha="0.4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_backToHomeRec"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="backToHomeFromVoice"
+            android:drawableTint="@color/White"
+            android:background="@drawable/ic_round_arrow_back_ios_24"
+            app:layout_constraintBottom_toTopOf="@+id/view_dummy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_ViewTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/manropebold"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/recording"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_backToHomeRec"
+            app:layout_constraintTop_toTopOf="@+id/btn_backToHomeRec" />
+
+        <ImageView
+            android:id="@+id/audio_background"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25sp"
+            android:layout_marginEnd="30dp"
+            android:alpha="0.7"
+            android:padding="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/audio_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_dummy" />
+
+        <TextView
+            android:id="@+id/audio_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/opensens_reguler"
+            android:gravity="center"
+            android:padding="6dp"
+            android:onClick="setChangeAudioName"
+            android:text="@string/press_the_mic_button_n_to_start_recording"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_dummy"
+            app:drawableEndCompat="@drawable/ic_round_edit_24"
+            app:drawableTint="@color/Blue" />
+
+        <Chronometer
+            android:id="@+id/record_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/opensens_reguler"
+            android:padding="6dp"
+            android:textColor="@color/White"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/audio_Name" />
+
+        <ImageButton
+            android:id="@+id/btn_Start_Record"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/btn_shape_one"
+            android:padding="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_round_mic_24"
+            android:tint="@color/white"
+            android:onClick="startRecording"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/record_timer"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/setRecordName"
+        android:visibility="gone"
+        layout="@layout/set_record_name"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

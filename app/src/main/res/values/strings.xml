@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Simple Audio Record</string>
+    <string name="press_the_mic_button_n_to_start_recording">Press The Mic Button To Start Recording…</string>
+    <string name="recording">Recording</string>
+    <string name="exit">Exit</string>
+    <string name="save">Save</string>
+    <string name="record_name">record name</string>
+    <string name="todo">TODO</string>
+    <string name="playing">Playing</string>
+    <string name="audio_record">Audio Record</string>
+</resources>
